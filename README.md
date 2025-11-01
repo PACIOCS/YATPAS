@@ -56,7 +56,7 @@ Se desideri compilare il plugin dai sorgenti:
 
 1.  Clona il repository (sostituisci l'URL con il tuo):
     ```bash
-    git clone [https://github.com/tuo_utente/YATPAS.git](https://github.com/tuo_utente/YATPAS.git)
+    git clone [https://github.com/paciocs/YATPAS.git](https://github.com/paciocs/YATPAS.git)
     cd YATPAS
     ```
 
