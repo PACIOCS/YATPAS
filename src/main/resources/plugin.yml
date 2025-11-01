@@ -1,0 +1,35 @@
+name: YATPAS
+version: 1.0.0
+main: it.yatpas.yatpas.YATPAS
+api-version: 1.20
+authors:
+  - paciocs.xyz
+description: Yet Another TPA System
+
+commands:
+  tpa:
+    description: Richiede di teletrasportarsi a un altro giocatore.
+    usage: /<command> <giocatore>
+    permission: yatpas.use.tpa
+  tpahere:
+    description: Richiede a un giocatore di teletrasportarsi da te.
+    usage: /<command> <giocatore>
+    permission: yatpas.use.tpahere
+  tpaccept:
+    description: Accetta la richiesta di teletrasporto.
+    usage: /<command>
+    permission: yatpas.use.tpaccept
+  tpdeny:
+    description: Nega la richiesta di teletrasporto.
+    usage: /<command>
+    permission: yatpas.use.tpdeny
+  tpacancel:
+    description: Annulla la tua richiesta di teletrasporto in uscita.
+    usage: /<command>
+    permission: yatpas.use.tpacancel
+
+permissions:
+  yatpas.use.*:
+    default: true
+  yatpas.admin:
+    default: op

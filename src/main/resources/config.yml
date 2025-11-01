@@ -1,0 +1,33 @@
+teleport-warmup-seconds: 5
+tpa-cooldown-seconds: 2
+request-timeout-seconds: 60
+cancel-on-move: true
+cancel-on-damage: true
+
+messages:
+  prefix: "&3YATPAS&8» &f"
+
+  request-sent: "Hai inviato una richiesta TPA a &a%target_name%&f."
+  request-received: "&a%sender_name% &fvuole teletrasportarsi da te."
+  request-tpahere-received: "&a%sender_name% &fti sta chiedendo di teletrasportarti da lui."
+
+  accept-click: "&a[CLICCA QUI PER ACCETTARE]"
+  deny-instructions: "Digita &c/tpdeny &fper rifiutare. Scade tra &6%seconds%s&f."
+
+  teleport-starting: "Teletrasporto in corso... Non muoverti per &6%seconds% secondi&f!"
+  teleport-success: "Teletrasporto completato!"
+  teleport-cancelled-move: "&cTeletrasporto annullato! Ti sei mosso."
+  teleport-cancelled-damage: "&cTeletrasporto annullato! Hai subito danni."
+
+  accepted-sender: "&a%target_name% &fha accettato la tua richiesta."
+  accepted-target: "Hai accettato la richiesta di &a%sender_name%&f."
+  denied-sender: "&c%target_name% &fha rifiutato la tua richiesta."
+  denied-target: "Hai rifiutato la richiesta di &c%sender_name%&f."
+  cancelled-success: "La tua richiesta TPA è stata annullata."
+  cancelled-target: "&a%sender_name% &fha annullato la richiesta TPA."
+
+  error-cooldown: "&cDevi attendere &6%seconds% secondi &cprima di inviare un'altra richiesta TPA."
+  error-no-pending-request: "&cNessuna richiesta TPA in sospeso per te."
+  error-request-expired: "&cLa richiesta TPA è scaduta."
+  error-target-offline: "&cIl giocatore &6%target_name% &cè offline."
+  error-self-tpa: "&cNon puoi chiedere TPA a te stesso."
