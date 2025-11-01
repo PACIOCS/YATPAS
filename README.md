@@ -35,7 +35,7 @@ Il file `config.yml` ti permette di personalizzare ogni aspetto del sistema TPA.
 | `request-timeout-seconds` | Tempo prima che una richiesta TPA scada. | `60` |
 | `cancel-on-move` | `true` per annullare il warmup se il giocatore si muove. | `true` |
 | `cancel-on-damage` | `true` per annullare il warmup se il giocatore subisce danni. | `true` |
-| `messages.prefix` | Prefisso visualizzato in tutti i messaggi. | `&8[&bYATPAS&8] &f` |
+| `messages.prefix` | Prefisso visualizzato in tutti i messaggi. | `&3YATPAS&8» &f` |
 
 ---
 
