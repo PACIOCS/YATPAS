@@ -1,80 +1,86 @@
 # 🚀 YATPAS - Yet Another TPA System
 
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/paciocs.xyz/YATPAS)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/paciocs/YATPAS)
 ![Spigot version](https://img.shields.io/badge/Minecraft-1.20%2B-blueviolet)
-![License](https://img.shields.io/github/license/paciocs.xyz/YATPAS)
+![License](https://img.shields.io/github/license/paciocs/YATPAS)
 
-YATPAS è un sistema di teletrasporto Player-to-Player (TPA) semplice, ma robusto, per server Bukkit/Spigot/Paper. Offre richieste cliccabili, cooldown configurabili, timeout e cancellazione automatica in caso di movimento o danno, garantendo un'esperienza di gioco equilibrata.
+YATPAS is a simple but robust Player-to-Player Teleport (TPA) system for Bukkit/Spigot/Paper servers. It features clickable requests, configurable cooldowns, timeouts, and automatic cancellation upon movement or damage, ensuring a balanced gameplay experience.
 
-## ✨ Caratteristiche Principali
+***
 
-* **Richieste Cliccabili:** I giocatori possono accettare o rifiutare le richieste TPA con un semplice click.
-* **Logica TPA/TPAHERE Corretta:** Supporta sia l'andare da un altro giocatore (`/tpa`) sia il richiamarlo a sé (`/tpahere`).
-* **Warmup (Tempo di Attesa):** Tempo configurabile prima del teletrasporto effettivo, annullato se il giocatore si muove o subisce danni.
-* **Cooldown & Timeout:** Limita lo spam di richieste e assicura che le richieste scadano automaticamente.
-* **Messaggi Personalizzabili:** Tutti i messaggi sono configurabili tramite `config.yml`.
+## 🇮🇹 IMPORTANT NOTE ON LANGUAGE
 
-## 📦 Comandi
+The default language for the messages inside the plugin's `config.yml` is **Italian**. You can easily translate all messages to English or any other language by editing the `messages:` section of the configuration file.
 
-| Comando | Alias | Descrizione | Permesso |
+***
+
+## ✨ Key Features
+
+* **Clickable Requests:** Players can accept or deny TPA requests with a single click.
+* **Correct TPA/TPAHERE Logic:** Supports both teleporting to another player (`/tpa`) and calling a player to your location (`/tpahere`).
+* **Warmup:** Configurable time before the actual teleport, which is cancelled if the player moves or takes damage.
+* **Cooldown & Timeout:** Limits request spam and ensures requests expire automatically.
+* **Customizable Messages:** All messages are fully configurable via `config.yml`.
+
+## 📦 Commands
+
+| Command | Alias | Description | Permission |
 | :--- | :--- | :--- | :--- |
-| `/tpa <giocatore>` | | Richiede di teletrasportarsi al giocatore specificato. | `yatpas.use.tpa` |
-| `/tpahere <giocatore>` | | Richiede al giocatore specificato di teletrasportarsi da te. | `yatpas.use.tpahere` |
-| `/tpaccept` | | Accetta la richiesta TPA in sospeso. | `yatpas.use.tpaccept` |
-| `/tpdeny` | | Nega la richiesta TPA in sospeso. | `yatpas.use.tpdeny` |
-| `/tpacancel` | | Annulla la tua richiesta TPA in uscita. | `yatpas.use.tpacancel` |
+| `/tpa <player>` | | Requests to teleport to the specified player. | `yatpas.use.tpa` |
+| `/tpahere <player>` | | Requests the specified player to teleport to you. | `yatpas.use.tpahere` |
+| `/tpaccept` | | Accepts the pending TPA request. | `yatpas.use.tpaccept` |
+| `/tpdeny` | | Denies the pending TPA request. | `yatpas.use.tpdeny` |
+| `/tpacancel` | | Cancels your outgoing TPA request. | `yatpas.use.tpacancel` |
 
-## ⚙️ Configurazione
+## ⚙️ Configuration
 
-Il file `config.yml` ti permette di personalizzare ogni aspetto del sistema TPA.
+The `config.yml` file allows you to customize every aspect of the TPA system.
 
-| Chiave Config | Descrizione | Valore di Default |
+| Config Key | Description | Default Value |
 | :--- | :--- | :--- |
-| `teleport-warmup-seconds` | Tempo in secondi prima del teletrasporto. | `5` |
-| `tpa-cooldown-seconds` | Tempo di attesa tra l'invio di due richieste. | `2` |
-| `request-timeout-seconds` | Tempo prima che una richiesta TPA scada. | `60` |
-| `cancel-on-move` | `true` per annullare il warmup se il giocatore si muove. | `true` |
-| `cancel-on-damage` | `true` per annullare il warmup se il giocatore subisce danni. | `true` |
-| `messages.prefix` | Prefisso visualizzato in tutti i messaggi. | `&3YATPAS&8» &f` |
+| `teleport-warmup-seconds` | Time in seconds before the teleport occurs. | `5` |
+| `tpa-cooldown-seconds` | Cooldown between sending two TPA requests. | `2` |
+| `request-timeout-seconds` | Time before a TPA request expires. | `60` |
+| `cancel-on-move` | `true` to cancel warmup if the player moves. | `true` |
+| `cancel-on-damage` | `true` to cancel warmup if the player takes damage. | `true` |
+| `messages.prefix` | Prefix displayed in all messages. | `&3YATPAS&8» &f` |
 
 ---
 
-## 🛠️ Installazione e Compilazione
+## 🛠️ Installation and Compilation
 
-### Requisiti
+### Requirements
 
-* Java Development Kit (JDK) 17 o superiore.
+* Java Development Kit (JDK) 17 or higher.
 * Apache Maven.
 
 ### Download
 
-Puoi scaricare l'ultima versione compilata [qui](LINK_AL_TUO_JAR).
+You can download the latest compiled version [here](LINK_TO_YOUR_JAR).
 
-### Compilazione da Sorgente
+### Compiling from Source
 
-Se desideri compilare il plugin dai sorgenti:
+If you wish to compile the plugin from source:
 
-1.  Clona il repository (sostituisci l'URL con il tuo):
+1.  Clone the repository (replace the URL with yours):
     ```bash
     git clone [https://github.com/paciocs/YATPAS.git](https://github.com/paciocs/YATPAS.git)
     cd YATPAS
     ```
 
-2.  Compila il progetto utilizzando Maven:
+2.  Compile the project using Maven:
     ```bash
     mvn clean package
     ```
 
-3.  Il file JAR compilato (`YATPAS-1.0.0.jar`) si troverà nella cartella `target/`.
+3.  The compiled JAR file (`YATPAS-1.0.0.jar`) will be found in the `target/` folder.
 
-## 📜 Licenza
+## 📜 License
 
-Questo progetto è distribuito sotto licenza [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
-## 🙋 Contatti e Supporto
+## 🙋 Contact and Support
 
-Se trovi bug o desideri suggerire nuove funzionalità, apri una Issue su GitHub o invia una mail a info@paciocs.xyz!
+If you find any bugs or want to suggest new features, please open an Issue on GitHub!
 
 ---
-
-*Questo plugin è stato sviluppato come progetto open-source.*
